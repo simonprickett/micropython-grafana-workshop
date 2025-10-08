@@ -8,6 +8,7 @@ import time
 from gfx_pack import SWITCH_A, GfxPack
 from prometheus_remote_write_payload import PrometheusRemoteWritePayload
 
+SERVER_IP_ADDRESS = "192.168.8.100"
 
 SPINNER_CHARS = [ "\\", "|", "/", "-" ]
 
@@ -94,7 +95,7 @@ gfx.set_backlight(0, 0, 0, 80)
 clear_screen()
 ip_address = wlan.ifconfig()[0]
 device_identifier = f"gfx_{ip_address.split('.')[3]}"
-ntptime.host = "192.168.8.100"
+ntptime.host = SERVER_IP_ADDRESS
 ntptime.settime()
 
 display_centered(device_identifier, 8, 2)
@@ -116,7 +117,7 @@ while True:
 
         # Send data to the Prometheus remote write endpoint.
         response = requests.post(
-            "http://192.168.8.100:9090/api/v1/write",
+            f"http://{SERVER_IP_ADDRESS}:9090/api/v1/write",
             headers = {
                 "Content-Encoding": "snappy",
                 "Content-Type": "application/x-protobuf",
