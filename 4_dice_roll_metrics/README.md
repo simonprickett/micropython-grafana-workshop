@@ -1,16 +1,19 @@
 # TODO
 
-## Device Setup
+## Install Dependencies on the Device
 
 TODO
 
-First, install the Prometheus Remote Write library ([details here](https://github.com/ttk1/prometheus_remote_write_payload)):
+Install the Prometheus Remote Write library ([details here](https://github.com/ttk1/prometheus_remote_write_payload)) like so:
 
 ```bash
 mpremote mip install github:ttk1/prometheus_remote_write_payload
 ```
 
-Then either run the software on the device without installing it:
+## Run the Code
+
+
+You can either run the software on the device without installing it:
 
 ```bash
 mpremote run dice_roll_metrics.py

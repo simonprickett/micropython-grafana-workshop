@@ -2,7 +2,7 @@
 
 TODO
 
-## Device Setup
+## Run the Code
 
 You can either run the software on the device without installing it:
 
