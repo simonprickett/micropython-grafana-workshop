@@ -6,6 +6,8 @@ TODO
 
 ## Pre-Requisites
 
+### Workshop Attendee
+
 To get the most from this workshop, you'll need to install the following software:
 
 * A recent version of [Python 3](https://www.python.org/downloads/) (this project has been tested with Python 3.13.12 on macOS Tahoe 26.0.1).
@@ -14,6 +16,10 @@ To get the most from this workshop, you'll need to install the following softwar
 * The MicroPython [`mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html) remote control utility.
 
 **Proceed once you have all of these installed.**
+
+### Workshop Instructor
+
+* TODO Docker / ntp / know the IP address of your machine...
 
 ## Hardware
 
