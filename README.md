@@ -2,7 +2,18 @@
 
 ## Introduction
 
-TODO
+This is the GitHub repository containing code and resources for a MicroPython / Grafana workshop.  
+
+If you're interested in having me run this workshop for your Meetup Group, work team or other gathering, please [get in touch](https://simonprickett.dev/contact/) and we'll see what we can do!  I have around 25 sets of the hardware needed for this.
+
+There are 4 main exercises in this workshop:
+
+1. Discover some of the capabilities of MicroPython with the Pimoroni GFX Pack for the Raspberry Pi Pico W.
+1. Try out the MicroPython REPL on a Pico W and experience immediate feedback.
+1. Learn how to use the `requests` library to call a simple API and display results returned from it.
+1. Putting everything together, we conclude by sending basic metrics from the Pico W devices to Prometheus, and visualizing them with Grafana.
+
+This workshop is suitable for all, some Python experience is handy but not strictly required.  Everyone (attendees and instructor) need to bring laptops and have the ability to install software on them.  If I'm running the workshop, I bring USB A to micro USB cables for attendees to connect the Pico W devices to their laptops: attendees must bring their own port adapter / hub / anything required to ensure there's a USB A port available on their machines.  The venue needs to provide wifi.  If I'm running the workshop, I bring my own additional travel router to ensure a smooth experience with connecting the devices to a network. 
 
 ## Pre-Requisites
 
