@@ -5,6 +5,10 @@ import time
 
 from gfx_pack import SWITCH_A, GfxPack
 
+SERVER_IP_ADDRESS = "192.168.8.100"
+WIFI_SSID = "iamberyl"
+WIFI_PASSWORD = "goodlife"
+
 SPINNER_CHARS = [ "\\", "|", "/", "-" ]
 
 gfx = GfxPack()
@@ -46,7 +50,7 @@ display.update()
 # Connect to the network.
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
-wlan.connect("iamberyl", "goodlife")
+wlan.connect(WIFI_SSID, WIFI_PASSWORD)
 
 n = 0
 while not wlan.isconnected() and wlan.status() >= 0:
@@ -95,7 +99,7 @@ while True:
         gfx.set_backlight(128, 16, 0, 0)
 
         # Make an API request to get the dice roll...
-        response_doc = requests.get("http://192.168.8.100:8000/roll").json()
+        response_doc = requests.get(f"http://{SERVER_IP_ADDRESS}/roll").json()
         number = response_doc["number"]
 
         # Display the result.

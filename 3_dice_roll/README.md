@@ -10,6 +10,8 @@ If your instructor tells you the IP address of a server that's already running t
 
 ## Configuration
 
+TODO update this for constants...
+
 Open `dice_roll.py` in your code editor and find line 98 which looks like this:
 
 ```python

@@ -9,6 +9,8 @@ from gfx_pack import SWITCH_A, GfxPack
 from prometheus_remote_write_payload import PrometheusRemoteWritePayload
 
 SERVER_IP_ADDRESS = "192.168.8.100"
+WIFI_SSID = "iamberyl"
+WIFI_PASSWORD = "goodlife"
 
 SPINNER_CHARS = [ "\\", "|", "/", "-" ]
 
@@ -55,7 +57,7 @@ display.update()
 # Connect to the network.
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
-wlan.connect("iamberyl", "goodlife")
+wlan.connect(WIFI_SSID, WIFI_PASSWORD)
 
 n = 0
 while not wlan.isconnected() and wlan.status() >= 0:
