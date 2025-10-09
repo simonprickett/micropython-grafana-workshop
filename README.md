@@ -19,7 +19,13 @@ To get the most from this workshop, you'll need to install the following softwar
 
 ### Workshop Instructor
 
-* TODO Docker / ntp / know the IP address of your machine...
+If you're following this alone, or leading a workshop then you'll need to do a few extra setup tasks on your machine.  These are:
+
+* TODO know your IP address
+* TODO Docker for ntp
+* TODO Prometheus setup
+* TODO Get Grafana set up
+* TODO import Grafana dashboard
 
 ## Hardware
 
