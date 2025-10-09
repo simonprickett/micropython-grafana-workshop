@@ -20,7 +20,7 @@ To get the most from this workshop, you'll need to install the following softwar
 Now, open your terminal and clone the GitHub repository to wherever you like to keep coding projects on your machine:
 
 ```bash
-git clone https://github.com/simonprickett/grafana-circuitpython-experiments.git
+git clone https://github.com/simonprickett/micropython-grafana-workshop.git
 ```
 
 Then open this folder with your code editor and your terminal.
