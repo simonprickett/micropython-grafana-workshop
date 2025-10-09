@@ -17,9 +17,17 @@ To get the most from this workshop, you'll need to install the following softwar
 
 **Proceed once you have all of these installed.**
 
+Now, open your terminal and clone the GitHub repository to wherever you like to keep coding projects on your machine:
+
+```bash
+git clone https://github.com/simonprickett/grafana-circuitpython-experiments.git
+```
+
+Then open this folder with your code editor and your terminal.
+
 ### Workshop Instructor
 
-If you're following this alone, or leading a workshop then you'll need to do a few extra setup tasks on your machine.  These are:
+If you're following this alone, or leading a workshop then you'll need to completed the Attendee requirements above, then do a few extra setup tasks on your machine.  These are:
 
 #### Get Your IP Address
 
@@ -28,7 +36,7 @@ If you're following this alone, or leading a workshop then you'll need to do a f
 
 #### Docker
 
-You'll need Docker desktop as some components run inside Docker containers to simplify setup.
+You'll need Docker Desktop as some components run inside Docker containers to simplify setup.
 
 * Install [Docker Desktop](https://www.docker.com/products/docker-desktop/).
 
@@ -58,6 +66,11 @@ TODO why?
 #### MicroPython Script Configuration
 
 TODO IP address for Python scripts.
+
+* `3_dice_roll/dice_roll.py`
+* `4_dice_roll_metrics/dice_roll_metrics.py`
+
+Save your changes in these files before continuing.
 
 ## Hardware
 
