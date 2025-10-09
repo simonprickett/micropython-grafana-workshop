@@ -21,11 +21,40 @@ To get the most from this workshop, you'll need to install the following softwar
 
 If you're following this alone, or leading a workshop then you'll need to do a few extra setup tasks on your machine.  These are:
 
-* TODO know your IP address
-* TODO Docker for ntp
+#### Get Your IP Address
+
+* Connect to the wifi network that you're going to use for the workshop.  The Pico devices should also be able to connect to the same network - meaning that it needs to be one that has an SSID and password only.  Networks with captive portal / agree to terms and conditions joining steps won't work.  For that I recommend using your own router.  I use [this excellent travel router](https://www.gl-inet.com/products/gl-mt3000/).
+* Make a note of your machine's IP version 4 address on the wifi network. On macOS, you can get this by running `ipconfig getifaddr en0` in the terminal.
+
+#### Docker
+
+You'll need Docker desktop as some components run inside Docker containers to simplify setup.
+
+* Install [Docker Desktop](https://www.docker.com/products/docker-desktop/).
+
+#### NTP Server
+
+Some of the example code requires the Pico devices to have an idea of the current time.  The devices don't have a built in real time clock sync, but can get the time from an NTP server on boot up.  So, you'll need to run an NTP server for them to talk to.
+
+Start the NTP server from the terminal using Docker:
+
+```bash
+docker run --name=ntp --restart=always --publish=123:123/udp cturra/ntp
+```
+
+#### Prometheus
+
+TODO why?
+
 * TODO Prometheus setup
 * TODO Get Grafana set up
 * TODO import Grafana dashboard
+
+Before starting the workshop, make sure that the NTP server, Prometheus, Grafana and the dice roll server are all running.
+
+#### MicroPython Script Configuration
+
+TODO IP address for Python scripts.
 
 ## Hardware
 
