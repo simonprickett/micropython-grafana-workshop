@@ -47,10 +47,13 @@ docker run --name=ntp --restart=always --publish=123:123/udp cturra/ntp
 TODO why?
 
 * TODO Prometheus setup
+
+#### Grafana
+
 * TODO Get Grafana set up
 * TODO import Grafana dashboard
 
-Before starting the workshop, make sure that the NTP server, Prometheus, Grafana and the dice roll server are all running.
+**Before starting the workshop, make sure that the NTP server, Prometheus, Grafana and the dice roll server are all running.**
 
 #### MicroPython Script Configuration
 
