@@ -38,6 +38,8 @@ Then open this folder with your code editor and your terminal.
 
 ### Workshop Instructor
 
+**If you are attending an instructor led workshop and aren't the instructor, you can skip this section!**
+
 If you're following this alone, or leading a workshop then you'll need to completed the Attendee requirements above, then do a few extra setup tasks on your machine.  These are:
 
 #### Get Your IP Address
@@ -76,12 +78,22 @@ TODO why?
 
 #### MicroPython Script Configuration
 
-TODO IP address for Python scripts.
+A couple of the MicroPython scripts need to know the SSID and password for your wifi network, and the IP address of the machine that you're running the server side components on.
+
+Edit each of these scripts in turn:
 
 * `3_dice_roll/dice_roll.py`
 * `4_dice_roll_metrics/dice_roll_metrics.py`
 
-Save your changes in these files before continuing.
+In each file, replace the section:
+
+```python
+SERVER_IP_ADDRESS = "192.168.8.100"
+WIFI_SSID = "iamberyl"
+WIFI_PASSWORD = "goodlife"
+```
+
+with the details for your wifi network and machine's IP address. Save your changes in these files before continuing.
 
 ## Hardware
 
