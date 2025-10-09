@@ -37,4 +37,4 @@ mpremote cp dice_roll_metrics.py :main.py
 mpremote reset
 ```
 
-Press button "A" to roll the dice and send the metric to Prometheus / Google Cloud.
+Press button "A" to roll the dice and send the metric to Prometheus / Grafana Cloud (depending on how the workshop's been set up).
