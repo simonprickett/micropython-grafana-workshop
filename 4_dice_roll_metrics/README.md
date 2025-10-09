@@ -4,7 +4,9 @@ This demo is a different take on the dice roll. Instead of calling an API to get
 
 ## Install Dependencies on the Device
 
-This example uses a MicroPython library that makes sending metrics to Prometheus or Grafana Cloud easier.  If your instructor provided the hardware for this workshop, you can skip this step as the library is already installed. If you're using your own hardware, you'll need to install the library ([details here](https://github.com/ttk1/prometheus_remote_write_payload)) like so with your device connected to your machine:
+This example uses a MicroPython library that makes sending metrics to Prometheus or Grafana Cloud easier.  **If your instructor provided the hardware for this workshop, you can skip this step as the library is already installed.**
+
+If you're using your own hardware, you'll need to install the library ([details here](https://github.com/ttk1/prometheus_remote_write_payload)) like so with your device connected to your machine:
 
 ```bash
 mpremote mip install github:ttk1/prometheus_remote_write_payload
@@ -12,7 +14,9 @@ mpremote mip install github:ttk1/prometheus_remote_write_payload
 
 ## Configuration
 
-If you're taking part in an instructor-led workshop, you can skip this section as the wifi and server details you need are pre-configured.  If you're running the code outside of a workshop, open `dice_roll_metrics.py` in your code editor and change these values:
+**If you're taking part in an instructor-led workshop, you can skip this section as the wifi and server details you need are pre-configured.**
+
+If you're running the code outside of a workshop, open `dice_roll_metrics.py` in your code editor and change these values:
 
 ```python
 SERVER_IP_ADDRESS = "192.168.8.100"
