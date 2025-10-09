@@ -4,13 +4,15 @@ This is a basic demonstration showing how to call an API from MicroPython with t
 
 ## Server Setup
 
-Skip this section if you're taking part in an instructor-led workshop.
+**Skip this section if you're taking part in an instructor-led workshop.**
 
 Before running this code on a device, you'll need to [follow the instructions](../server_side/dice_roller/) to get the dice roll server running. Once the server is up and running, make a note of the IP address that it is running on, as you'll need that for the next step.
 
 ## Configuration
 
-If you're taking part in an instructor-led workshop, you can skip this section as the wifi and server details you need are pre-configured.  If you're running the code outside of a workshop, open `dice_roll.py` in your code editor and change these values:
+**If you're taking part in an instructor-led workshop, you can skip this section as the wifi and server details you need are pre-configured.**
+
+If you're running the code outside of a workshop, open `dice_roll.py` in your code editor and change these values:
 
 ```python
 SERVER_IP_ADDRESS = "192.168.8.100"
