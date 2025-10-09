@@ -41,8 +41,6 @@ Start the container:
 docker run -p 8000:8000 dice-roller
 ```
 
-TODO: Move this into the main Docker Compose file for the project.
-
 ### Without Docker
 
 Start the server like this:
