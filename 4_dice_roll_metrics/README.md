@@ -12,7 +12,15 @@ mpremote mip install github:ttk1/prometheus_remote_write_payload
 
 ## Configuration
 
-TODO server IP address and wifi.
+If you're taking part in an instructor-led workshop, you can skip this section as the wifi and server details you need are pre-configured.  If you're running the code outside of a workshop, open `dice_roll_metrics.py` in your code editor and change these values:
+
+```python
+SERVER_IP_ADDRESS = "192.168.8.100"
+WIFI_SSID = "iamberyl"
+WIFI_PASSWORD = "goodlife"
+```
+
+Replace `192.168.8.100` with the IP address of the machine that you're running Prometheus and the NTP server on.  Replace the values of `WIFI_SSID` and `WIFI_PASSWORD` with the correct values for the wifi network that the machine you're running the dice roll server on is connected to.
 
 ## Run the Code
 
