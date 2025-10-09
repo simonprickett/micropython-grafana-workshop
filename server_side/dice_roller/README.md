@@ -8,6 +8,16 @@ You'll need a recent version of [Python 3](https://www.python.org/downloads/) in
 
 ## Setup
 
+### Using Docker (Recommended)
+
+Build the Docker image: 
+
+```bash
+docker build -t dice-roller .
+```
+
+### Without Docker
+
 First, create a virtual Python environment and activate it:
 
 ```bash
@@ -22,6 +32,18 @@ pip install -r requirements.txt
 ```
 
 ## Run the Server
+
+### Using Docker (Recommended)
+
+Start the container:
+
+```bash
+docker run -p 8000:8000 dice-roller
+```
+
+TODO: Move this into the main Docker Compose file for the project.
+
+### Without Docker
 
 Start the server like this:
 
