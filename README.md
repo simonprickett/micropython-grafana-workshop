@@ -13,7 +13,50 @@ To get the most from this workshop, you'll need to install the following softwar
 * A code editor of your choice ([VSCode](https://code.visualstudio.com/) is a good all-rounder).  Anything that you're comfortable using to browse and do minor editing on Python files is fine.
 * The MicroPython [`mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html) remote control utility.
 
-Proceed once you have all of these installed.
+**Proceed once you have all of these installed.**
+
+## Hardware
+
+Your instructor will have all of the hardware that you need. If you're using these materials outside of the workshop, you'll need to get these items:
+
+* Either a [Raspberry Pi Pico W](https://shop.pimoroni.com/products/raspberry-pi-pico-w?variant=40059369652307) or [Pico 2W](https://shop.pimoroni.com/products/raspberry-pi-pico-2-w?variant=54852253024635).  You'll need to solder headers to it, or just buy the "WH" variant with the headers pre-attached.
+* A [Pimoroni GFX Pack display](https://shop.pimoroni.com/products/pico-gfx-pack?variant=40414469062739).
+* A micro USB to USB A or C data cable: you'll use this to connect the Pico to your machine.
+
+You only need one set of these, but if you have multiple it makes for a more interesting demo.
+
+Prepare the hardware by attaching the GFX Pack to the Pico's headers, ensuring that the USB port on the Pico aligns with the picture of the USB port on the back of the GFX Pack.
+
+You'll then need to install the MicroPython runtime, using Pimoroni's "batteries included" build of MicroPython: this ensures that you have the drivers needed to work with the GFX Pack screen, backlight and buttons.
+
+* Pimoroni MicroPython: [Raspberry Pi Pico W version](https://github.com/pimoroni/pimoroni-pico/releases) (filename begins `picow-`).
+* Pimoroni MicroPython: [Raspberry Pi Pico 2W version](https://github.com/pimoroni/pimoroni-pico-rp2350/releases) (filename begins `rpi_pico2_w-`).
+
+**Be sure to choose the "W" version otherwise you won't get wifi support!**
+
+Once you've downloaded the correct MicroPython runtime image, install it on your device like this:
+
+* Hold down the white "BOOTSEL" button on the top of the device and keep it held down while connecting the device to your machine using a micro USB to USB A or C data cable.
+* Your device appears as a mounted disk on your machine.  You can now release the "BOOTSEL" button.
+* Drag the `.uf2` file that you downloaded to that drive and keep the device attached until copying completes.
+
+Then, use `mpremote` to check your installation. With the Pico still connected, enter the following command on your machine:
+
+```bash
+mpremote repl
+```
+
+You should see output similar to this (MicroPython version and the device path may vary). The output below is from a Pico W, Pico 2W output will differ slightly.
+
+```
+Connected to MicroPython at /dev/cu.usbmodem31401
+Use Ctrl-] or Ctrl-x to exit this shell
+MicroPython v1.25.0, picow v1.25.0 on 2025-05-12; Raspberry Pi Pico W with RP2040
+Type "help()" for more information.
+>>>
+```
+
+Press `Ctrl-X` to exit and disconnect the Pico from your system.
 
 ## Agenda
 
