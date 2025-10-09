@@ -1,6 +1,6 @@
 # Dice Rolls (Metrics Creation)
 
-TODO
+This demo is a different take on the dice roll. Instead of calling an API to get the dice roll, the device generates a number itself and sends it as a metric to Prometheus using the Prometheus remote write library.
 
 ## Install Dependencies on the Device
 
