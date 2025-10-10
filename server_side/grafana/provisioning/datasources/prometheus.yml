@@ -12,7 +12,7 @@ datasources:
     type: prometheus
     access: proxy
     orgId: 1
-    url: http://host.docker.internal:9090
+    url: "http://host.docker.internal:9090"
     password:
     user:
     basicAuth: false
@@ -22,9 +22,9 @@ datasources:
     isDefault: true
     readOnly: false
     jsonData:
-      - cacheLevel: None
-      - httpMethod: POST
-      - pdcInjected: false,
-      - prometheusType: Prometheus
-      - prometheusVersion": 2.50.1
-      - timeInterval: 2s
+      cacheLevel: None
+      httpMethod: POST
+      pdcInjected: false,
+      prometheusType: Prometheus
+      prometheusVersion: 2.50.1
+      timeInterval: 2s
