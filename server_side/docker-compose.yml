@@ -1,3 +1,4 @@
+name: micropython-grafana-workshop
 services:
   ntp:
     container_name: ntp
