@@ -1,1 +1,30 @@
-TODO
+apiVersion: 1
+
+deleteDatasources:
+  - name: prometheus
+    orgId: 1
+
+prune: true
+
+datasources:
+  - id: 1
+    name: prometheus
+    type: prometheus
+    access: proxy
+    orgId: 1
+    url: http://host.docker.internal:9090
+    password:
+    user:
+    basicAuth: false
+    basicAuthUser:
+    basicAuthPassword:
+    withCredentials:
+    isDefault: true
+    readOnly: false
+    jsonData:
+      - cacheLevel: None
+      - httpMethod: POST
+      - pdcInjected: false,
+      - prometheusType: Prometheus
+      - prometheusVersion": 2.50.1
+      - timeInterval: 2s
