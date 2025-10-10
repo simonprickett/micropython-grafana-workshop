@@ -49,32 +49,23 @@ If you're following this alone, or leading a workshop then you'll need to comple
 
 #### Docker
 
-You'll need Docker Desktop as some components run inside Docker containers to simplify setup.
+You'll need Docker Desktop as some components run inside Docker containers to simplify setup.  This makes the setup very easy, quick, and repeatable.
 
 * Install [Docker Desktop](https://www.docker.com/products/docker-desktop/).
 
-#### NTP Server
-
-Some of the example code requires the Pico devices to have an idea of the current time.  The devices don't have a built in real time clock sync, but can get the time from an NTP server on boot up.  So, you'll need to run an NTP server for them to talk to.
-
-Start the NTP server from the terminal using Docker:
+Then:
 
 ```bash
-docker run --name=ntp --restart=always --publish=123:123/udp cturra/ntp
+cd server_side
+docker compose up
 ```
 
-#### Prometheus
+This will automatically start and configure everything you need:
 
-TODO why?
-
-* TODO Prometheus setup
-
-#### Grafana
-
-* TODO Get Grafana set up
-* TODO import Grafana dashboard
-
-**Before starting the workshop, make sure that the NTP server, Prometheus, Grafana and the dice roll server are all running.**
+* An NTP server.
+* Prometheus with remote write enabled.
+* Grafana with automatic provisioning of the Prometheus data source and dashboard that you need.
+* The dice roll server contained in [`server_side/dice_roller`](server_side/dice_roller/).
 
 #### MicroPython Script Configuration
 
