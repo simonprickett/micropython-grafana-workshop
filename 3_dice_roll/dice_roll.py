@@ -99,7 +99,7 @@ while True:
         gfx.set_backlight(128, 16, 0, 0)
 
         # Make an API request to get the dice roll...
-        response_doc = requests.get(f"http://{SERVER_IP_ADDRESS}/roll").json()
+        response_doc = requests.get(f"http://{SERVER_IP_ADDRESS}:8000/roll").json()
         number = response_doc["number"]
 
         # Display the result.
