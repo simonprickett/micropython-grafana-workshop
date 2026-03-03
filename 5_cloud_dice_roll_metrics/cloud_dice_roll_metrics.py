@@ -7,10 +7,14 @@ import time
 from gfx_pack import SWITCH_A, GfxPack
 from prometheus_remote_write_payload import PrometheusRemoteWritePayload
 
-# TODO DEFINE CLOUD ENDPOINT...
 # TODO Replace these with your own Grafana Cloud credentials...
-CLOUD_ENDPOINT = "TODO your Grafana Cloud endpoint"
-CLOUD_AUTH = ("TODO user", "TODO password")
+CLOUD_ENDPOINT = "TODO your Grafana Cloud Prometheus Remote Write Endpoint"
+# Example: https://prometheus-prod-24-prod-eu-west-2.grafana.net/api/prom/push
+
+CLOUD_AUTH = (
+    "TODO your Grafana Cloud Prometheus username.",  # Example 2223456
+    "TODO your Grafana Cloud API Token"
+)
 
 WIFI_SSID = "iamberyl"
 WIFI_PASSWORD = "goodlife"
