@@ -4,7 +4,7 @@ This demo is a different take on the dice roll. Instead of calling an API to get
 
 ## Sign up for the Grafana Cloud Free Forever Plan
 
-TODO
+You'll need to sign up for the Grafana Cloud Free Forever plan.  [Start here](https://grafana.com/get).
 
 ## Install Dependencies on the Device
 
@@ -18,7 +18,28 @@ mpremote mip install github:ttk1/prometheus_remote_write_payload
 
 ## Configuration
 
-TODO
+There are a couple of constants that you'll need to set to have values appropriate for your Grafana Cloud environment.  Open `cloud_dice_roll_metrics.py` in your editor.
+
+Find the line:
+
+```python
+CLOUD_ENDPOINT = "TODO your Grafana Cloud Prometheus Remote Write Endpoint"
+```
+
+and replace the value with the URL of your Grafana Cloud Prometheus Remote Write endpoint.  Ask your instructor for help with finding this.
+
+Find the lines:
+
+```python
+CLOUD_AUTH = (
+    "TODO your Grafana Cloud Prometheus username.",  # Example 2223456
+    "TODO your Grafana Cloud API Token"
+)
+```
+
+and replace the values with your Grafana Cloud username and API token.   Ask your instructor for help with finding these.
+
+Save your changes.
 
 ## Run the Code
 
