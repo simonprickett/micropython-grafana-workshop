@@ -106,7 +106,7 @@ ip_address = wlan.ifconfig()[0]
 device_identifier = f"gfx_{ip_address.split('.')[3]}"
 # ntptime code has been removed as connecting to the internet will
 # allow MicroPython to connect to its default NTP servers, so we don't
-# need to configure cusom ones.
+# need to configure custom ones.
 
 display_centered(device_identifier, 8, 2)
 display_centered("A - ROLL DICE!", 27, 1)
