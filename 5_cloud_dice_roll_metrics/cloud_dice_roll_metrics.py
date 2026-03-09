@@ -1,4 +1,5 @@
 import network
+import ntptime
 import random
 import requests
 import sys
@@ -104,9 +105,10 @@ gfx.set_backlight(0, 0, 0, 80)
 clear_screen()
 ip_address = wlan.ifconfig()[0]
 device_identifier = f"gfx_{ip_address.split('.')[3]}"
-# ntptime code has been removed as connecting to the internet will
-# allow MicroPython to connect to its default NTP servers, so we don't
-# need to configure custom ones.
+
+# Custom ntptime server code has been removed as connecting to the internet will allow MicroPython
+#  to connect to its default NTP servers, so we don't need to configure custom ones.
+ntptime.settime()
 
 display_centered(device_identifier, 8, 2)
 display_centered("A - ROLL DICE!", 27, 1)
@@ -127,7 +129,7 @@ while True:
 
         # Send data to the Prometheus remote write endpoint.
         response = requests.post(
-            CLOUD_ENDPOINT
+            CLOUD_ENDPOINT,
             # TODO check these for Grafana cloud
             headers = {
                 "Content-Encoding": "snappy",
