@@ -97,8 +97,22 @@ gfx.set_backlight(0, 0, 0, 80)
 clear_screen()
 ip_address = wlan.ifconfig()[0]
 device_identifier = f"gfx_{ip_address.split('.')[3]}"
+
+# Get the time using NTP from the server...
+got_time = False
 ntptime.host = SERVER_IP_ADDRESS
-ntptime.settime()
+display_centered("GETTING NETWORK TIME", 28, 1)
+display.update()
+
+while not got_time:
+    try:
+        ntptime.settime()
+        got_time = True
+    except OSError:
+        print("Failed to set ntp time, retrying...")
+        time.sleep(.5)
+
+clear_screen()
 
 display_centered(device_identifier, 8, 2)
 display_centered("A - ROLL DICE!", 27, 1)

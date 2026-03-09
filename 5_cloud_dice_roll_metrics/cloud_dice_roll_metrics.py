@@ -108,7 +108,19 @@ device_identifier = f"gfx_{ip_address.split('.')[3]}"
 
 # Custom ntptime server code has been removed as connecting to the internet will allow MicroPython
 #  to connect to its default NTP servers, so we don't need to configure custom ones.
-ntptime.settime()
+got_time = False
+display_centered("GETTING NETWORK TIME", 28, 1)
+display.update()
+
+while not got_time:
+    try:
+        ntptime.settime()
+        got_time = True
+    except OSError:
+        print("Failed to set ntp time, retrying...")
+        time.sleep(.5)
+
+clear_screen()
 
 display_centered(device_identifier, 8, 2)
 display_centered("A - ROLL DICE!", 27, 1)
