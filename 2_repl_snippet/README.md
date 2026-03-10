@@ -38,7 +38,7 @@ Now, set the backlight to the colour of your choice using red, green, blue value
 gp.set_backlight(255, 0, 0, 0)
 ```
 
-Try some other colours!
+Try some other colours!  Note you can use the up and down cursor keys to scroll through previous lines of code.
 
 When you're done, turn off the backlight like so:
 
@@ -62,20 +62,40 @@ Then:
 import time
 ```
 
-TODO explain loop...
+Now we're going to tell the REPL we want to loop forever.  Enter this command and press return:
 
 ```python
 while True:
-    if gp.switch_pressed(SWITCH_A):
-        print("Button A!")
-        time.sleep(1)
 ```
 
-TODO explain how to execute the loop and test it...
+What happens now?  Nothing's exceuted yet, and the REPL prints:
 
-TODO explain how to return to the REPL prompt...
+```
+...
+```
+
+which means that it's waiting for the body of the loop.  Now type this and press return:
+
+```python
+if gp.switch_pressed(SWITCH_A):
+```
+
+and note that the REPL indents the cursor some more as it now wants the conditional statement to execute when the `if` condition matches.  Type these lines of code, pressing return after each:
+
+```python
+print("Button A!")
+time.sleep(1)
+```
+
+That's all the code we need... but how do we tell the REPL we're done here and it's time to execute it?  Press return twice... and note that the prompt is no longer indented.  We've told the REPL that's the end of the loop.  To run the code, press return again...
+
+Nothing will happen, but note that we aren't back at the `>>>` prompt.  This is because the REPL is running the loop continuously.  
+
+Press button A on the device.  Note that the REPL prints "Button A!" every time you do this.
+
+How do we stop the REPL from running this loop so we can return to the `>>>` prompt?  Press `Ctrl+C` to generate a KeyboardInterrupt event.
 
 ## Exiting the REPL Session
 
-When you're done, exit the REPL session by TODO.
+When you're done experimenting with the REPL, exit it by pressing `Ctrl+]`.
 
