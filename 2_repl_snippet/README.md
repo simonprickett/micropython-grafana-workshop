@@ -48,17 +48,32 @@ gfx.set_backlight(0, 0, 0, 0)
 
 ## Handling a Button Press
 
-TODO point is we're handling a loop (non-immediate execution) and explaining how the REPL handles that.
+Next we'll see how to handle a button press, and enter code that loops into the REPL.  In this case, the code won't always execute immediately, as the REPL needs to see the complete loop code before it can run it.
+
+First, let's import a couple more things we'll need.  Type the following commands into the REPL, pressing return after each:
 
 ```python
 from gfx_pack import SWITCH_A
-import time
+```
 
+Then:
+
+```python
+import time
+```
+
+TODO explain loop...
+
+```python
 while True:
     if gp.switch_pressed(SWITCH_A):
         print("Button A!")
         time.sleep(1)
 ```
+
+TODO explain how to execute the loop and test it...
+
+TODO explain how to return to the REPL prompt...
 
 ## Exiting the REPL Session
 
