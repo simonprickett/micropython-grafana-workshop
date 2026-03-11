@@ -24,6 +24,13 @@ display.set_font("bitmap8")
 
 mp_version = f"{sys.implementation.version[0]}.{sys.implementation.version[1]}.{sys.implementation.version[2]}"
 
+if sys.implementation._build == "RPI_PICO_W":
+    model = "Pico W"
+elif sys.implementation._build == "rpi_pico2_w":
+    model = "Pico 2W"
+else:
+    model = "??????"
+
 try:
     libraries_installed = "prometheus_remote_write_payload" in os.listdir("/lib")
 except OSError:
@@ -39,6 +46,8 @@ else:
     display_centered("Error :(", 6, 2)
     display_centered("Libraries missing :(", 35, 1)
     gp.set_backlight(255, 0, 0, 0)
+
+display_centered(f"Raspberry Pi {model}", 45, 1)
 
 display.update()
 
