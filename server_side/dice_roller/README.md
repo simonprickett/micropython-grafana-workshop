@@ -2,6 +2,8 @@
 
 This is a small [Flask](https://flask.palletsprojects.com/) server that exposes a single endpoint.  That endpoint returns a random dice roll between 1-6 inclusive as a JSON document. The server runs on your machine that needs to be on the same network as devices running the [`3_dice_roll`](../../3_dice_roll/) code, which will attempt to connect to it. That code should be updated to contain the IP address for your server, which Flask will log for you when you start it.
 
+Note that when you're running this in Docker, it uses the [`gunicorn`](https://gunicorn.org/) web server to handle signals from Docker and enable a clean shutdown.
+
 ## Pre-Requisites
 
 You'll need a recent version of [Python 3](https://www.python.org/downloads/) installed.  This has been tested using Python 3.13.2 on macOS Tahoe 26.0.1.
