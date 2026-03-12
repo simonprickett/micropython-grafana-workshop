@@ -37,6 +37,7 @@ services:
     build:
       context: ./dice_roller
       dockerfile: Dockerfile
+    init: true
     ports:
       - 8000:8000
     deploy:

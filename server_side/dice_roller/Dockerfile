@@ -17,4 +17,4 @@ COPY app.py .
 EXPOSE 8000
 
 # Run the Flask application
-CMD ["python", "app.py"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "1", "app:app"]
