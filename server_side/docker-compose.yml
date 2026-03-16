@@ -2,7 +2,9 @@ name: micropython-grafana-workshop
 services:
   ntp:
     container_name: ntp
-    image: cturra/ntp
+    build:
+      context: ./ntp
+      dockerfile: Dockerfile
     restart: unless-stopped
     ports:
       - "0.0.0.0:123:123/udp"
