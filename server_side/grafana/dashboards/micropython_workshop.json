@@ -571,6 +571,7 @@
     "to": "now"
   },
   "timepicker": {},
+  "refresh": "5s",
   "timezone": "browser",
   "title": "MicroPython Workshop",
   "uid": "55b703b0-1029-45fe-9df7-dfae31942d74",
